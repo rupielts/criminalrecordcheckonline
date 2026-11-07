@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-CA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | criminalrecordcheckonline.com</title><meta name="description" content="How criminalrecordcheckonline.com handles visitor information, button-click notifications and third-party links."><link rel="canonical" href="https://criminalrecordcheckonline.com/privacy/">
+<meta property="og:title" content="Privacy Policy | criminalrecordcheckonline.com"><meta property="og:description" content="How criminalrecordcheckonline.com handles visitor information, button-click notifications and third-party links."><meta property="og:type" content="article"><meta property="og:url" content="https://criminalrecordcheckonline.com/privacy/"><meta property="og:image" content="https://criminalrecordcheckonline.com/assets/logo.png">
+<link rel="icon" href="/assets/logo.png"><link rel="stylesheet" href="/assets/style.css"></head><body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="/" aria-label="Surrey Fingerprint, home"><img src="/assets/logo.png" alt="Surrey Fingerprint logo" width="92" height="92"><div><b>Criminal Record Check</b><span>CPIC / CRJMC</span></div></a>
+<a class="tel" href="tel:+16048250177">Call 604-825-0177</a>
+</div></header>
+<nav class="main" aria-label="Main"><div class="wrap"><ul>
+<li><a href="/">Home</a></li><li><a href="/online-criminal-record-check/">Online criminal record check</a></li>
+<li><a href="/cpic-vs-crjmc/">CPIC vs CRJMC</a></li><li><a href="/security-license-criminal-record-check/">Security licence</a></li>
+<li><a href="/name-based-vs-fingerprint-check/">Name-based vs fingerprint</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/contact/">Contact</a></li>
+</ul></div></nav>
+<main id="main"><section class="page"><div class="wrap"><h1>Privacy policy</h1><p class="lead">Last updated November 7, 2026.</p>
+<h2>Who we are</h2><p>This website is operated by Surrey Fingerprint Company, 112-8232 120 St, Surrey, BC V3W 3N4. Contact: <a href="mailto:info@surreyfingerprint.com">info@surreyfingerprint.com</a>.</p>
+<h2>What this website collects</h2>
+<p>You do not need to give us your name or any personal details to browse this site. We do not collect your application information here.</p>
+<p>When you select an Online Criminal Record Check button, we send ourselves a notification containing the time, the page you were on, your approximate city and region, whether you used a mobile or desktop device, and the page you came from. It does not include your name, email address or ID details. To avoid duplicate notifications, a short-lived anonymous code derived from your connection may be held for about two minutes and then deleted.</p>
+<p>We do not currently use advertising or analytics cookies on this site.</p>
+<h2>Your application</h2>
+<p>When you select the button, you move to our screening partner&rsquo;s website (everify.reliabilityscreening.ca) to complete your application. Your personal information is collected and handled there, under that site&rsquo;s own privacy terms. Please read them before you apply.</p>
+<h2>Service providers</h2>
+<p>Our website is hosted on Cloudflare, and notifications are delivered through an email service provider. These providers process the technical data described above on our behalf.</p>
+<h2>Your rights and questions</h2>
+<p>You may ask us what information we hold about you, or ask us to correct or delete it, by emailing <a href="mailto:info@surreyfingerprint.com">info@surreyfingerprint.com</a>. We handle personal information in line with applicable Canadian privacy law, including BC&rsquo;s Personal Information Protection Act and PIPEDA.</p>
+<h2>Changes</h2><p>We will update this page if our practices change, for example if we add website analytics.</p>
+</div></section>
+</main>
+<footer><div class="wrap">
+<p class="disc">criminalrecordcheckonline.com is operated by Surrey Fingerprint Company, Surrey, BC. We are an independent service provider and are not affiliated with, endorsed by, or acting for the Royal Canadian Mounted Police or the Government of Canada.</p>
+<address>Surrey Fingerprint Company<br>112-8232 120 St, Surrey, BC V3W 3N4<br><a href="tel:+16048250177">604-825-0177</a> · <a href="mailto:info@surreyfingerprint.com">info@surreyfingerprint.com</a></address>
+<ul><li><a href="/contact/">Contact</a></li><li><a href="/privacy/">Privacy policy</a></li><li><a href="/terms/">Terms and disclaimer</a></li><li><a href="https://surreyfingerprint.com">surreyfingerprint.com</a></li></ul>
+<p>&copy; <span id="yr">2026</span> Surrey Fingerprint Company</p>
+</div></footer>
+<script>
+(function(){
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var buttons=document.querySelectorAll('#start-check,[data-track]');
+  buttons.forEach(function(b){
+    b.addEventListener('click',function(){
+      try{
+        var data=JSON.stringify({page:location.pathname,ref:document.referrer||'',t:Date.now()});
+        navigator.sendBeacon('/api/click',new Blob([data],{type:'application/json'}));
+      }catch(e){}
+    });
+  });
+})();
+</script></body></html>
