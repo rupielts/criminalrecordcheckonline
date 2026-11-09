@@ -85,7 +85,7 @@ footer address{font-style:normal;margin:0 0 14px}
 .menu-btn[aria-expanded="true"] .bars{background:transparent}
 .menu-btn[aria-expanded="true"] .bars::before{top:0;transform:rotate(45deg)}
 .menu-btn[aria-expanded="true"] .bars::after{top:0;transform:rotate(-45deg)}
-@media(max-width:860px){
+@media(max-width:1170px){
 .menu-btn{display:flex}
 nav.main ul{display:none;flex-direction:column;width:100%;padding-bottom:8px}
 nav.main.open ul{display:flex}
@@ -94,3 +94,23 @@ nav.main ul a{padding:14px 4px;border-top:1px solid rgba(255,255,255,.18)}
 }
 
 .fig{text-align:center;margin:1.6em 0}.fig img{max-width:260px;width:100%;height:auto}.fig figcaption{font-size:.92rem;color:var(--mute);margin-top:8px}
+
+/* DD-START */
+nav.main .wrap{max-width:1240px}
+nav.main .dd{position:relative}
+.dd-btn{display:flex;align-items:center;gap:8px;background:none;border:0;color:#fff;font:inherit;font-size:.97rem;padding:13px 12px;cursor:pointer}
+.dd-btn::after{content:"";border:solid #fff;border-width:0 2px 2px 0;padding:3px;transform:rotate(45deg);margin-top:-3px;transition:transform .15s}
+.dd.open .dd-btn::after{transform:rotate(-135deg);margin-top:3px}
+.dd-btn:hover{background:var(--navy-d)}
+nav.main ul.dd-menu{display:none;flex-direction:column;position:absolute;left:0;top:100%;min-width:220px;background:var(--navy-d);padding:6px 0;z-index:20;box-shadow:0 10px 22px rgba(0,0,0,.28)}
+nav.main .dd.open ul.dd-menu{display:flex}
+nav.main ul.dd-menu a{padding:11px 18px;white-space:nowrap}
+nav.main ul.dd-menu a:hover{background:var(--navy)}
+@media(hover:hover) and (min-width:1171px){nav.main .dd:hover ul.dd-menu{display:flex}}
+@media(min-width:1171px){nav.main ul a{padding:13px 12px}}
+@media(max-width:1170px){
+.dd-btn{width:100%;justify-content:space-between;padding:14px 4px;border-top:1px solid rgba(255,255,255,.18);font-size:1rem}
+nav.main ul.dd-menu{position:static;box-shadow:none;background:rgba(0,0,0,.2);min-width:0;padding:0}
+nav.main ul.dd-menu a{padding:12px 18px;border-top:1px solid rgba(255,255,255,.12)}
+}
+/* DD-END */
